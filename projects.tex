@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{csquotes}
+\usepackage{geometry}
+\usepackage[pdftex,unicode]{hyperref}
+\usepackage[style=numeric,citestyle=alphabetic,sorting=none,backend=biber]{biblatex}
+\usepackage{indentfirst}
+\usepackage{etoolbox}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{mdframed}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{titlesec}
+
+\numberwithin{figure}{section}
+
+\setlist{noitemsep}
+
+\sloppy
+\clubpenalty=999
+\widowpenalty=9999
+
+% remove vertical spaces before and after verbatim
+\makeatletter
+\preto{\@verbatim}{\topsep=0pt \partopsep=0pt }
+\def\ScaleWidthIfNeeded{%
+ \ifdim\Gin@nat@width>0.4\textwidth
+    0.4\textwidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\def\ScaleHeightIfNeeded{%
+  \ifdim\Gin@nat@height>0.9\textheight
+    0.9\textheight
+  \else
+    \Gin@nat@width
+  \fi
+}
+
+\makeatother
+\setkeys{Gin}{width=\ScaleWidthIfNeeded,height=\ScaleHeightIfNeeded,keepaspectratio}
+
+\title{Практическое задание по курсу <<Программирование на языке Haskell>>}
+\author{Кудасов~Н.~Д.}
+\date{\the\year~г.}
+
+\begin{document}
+
+\maketitle
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+\clearpage
+
+\newcommand{\sectionbreak}{\clearpage}
+\newcommand{\subsectionbreak}{\clearpage}
+
+$body$
+
+\end{document}
