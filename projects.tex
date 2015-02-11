@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{report}
 
 \usepackage[utf8]{inputenc}
 \usepackage[english,russian]{babel}
@@ -14,7 +14,21 @@
 \usepackage{mdframed}
 \usepackage{graphicx}
 \usepackage{textcomp}
-\usepackage{titlesec}
+\usepackage[pagestyles]{titlesec}
+\usepackage{fancyhdr}
+
+\titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
+\newpagestyle{mystyle}
+{\sethead[\thepage][][\chaptertitle]{}{}{\thepage}}
+\pagestyle{mystyle}
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\lhead{\leftmark}
+\rhead{\rightmark}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
 
 \numberwithin{figure}{section}
 
@@ -26,6 +40,10 @@
 
 % remove vertical spaces before and after verbatim
 \makeatletter
+
+\renewcommand\thechapter{}
+\renewcommand\thesection{\@arabic\c@chapter.\@arabic\c@section}
+
 \preto{\@verbatim}{\topsep=0pt \partopsep=0pt }
 \def\ScaleWidthIfNeeded{%
  \ifdim\Gin@nat@width>0.4\textwidth
@@ -45,20 +63,47 @@
 \makeatother
 \setkeys{Gin}{width=\ScaleWidthIfNeeded,height=\ScaleHeightIfNeeded,keepaspectratio}
 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
 \title{Практическое задание по курсу <<Программирование на языке Haskell>>}
 \author{Кудасов~Н.~Д.}
 \date{\the\year~г.}
 
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+\begin{center}
 
-\setcounter{tocdepth}{2}
+% Upper part of the page. The '~' is needed because \\
+% only works if a paragraph has started.
+\includegraphics[width=0.2\textwidth]{images/msu}~\\[0.5cm]
+
+\textsc{\large Московский Государственный Университет им.~М.~В.~Ломоносова}\\[0.3cm]
+\textsc{\small
+  факультет Вычислительной Математики и Кибернетики\\
+  кафедра Алгоритмических Языков}\\[1.5cm]
+
+% Title
+\HRule \\[0.4cm]
+{ \Large \bfseries Практическое задание по курсу <<Программирование на языке Haskell>> \\[0.4cm] }
+
+\HRule \\[1.5cm]
+
+{\large Кудасов~Н.~Д.}
+
+\vfill
+
+% Bottom of the page
+{\large \the\year}
+
+\end{center}
+\end{titlepage}
+\thispagestyle{empty}
+
+\setcounter{tocdepth}{1}
 \tableofcontents
-\clearpage
 
 \newcommand{\sectionbreak}{\clearpage}
-\newcommand{\subsectionbreak}{\clearpage}
 
 $body$
 
