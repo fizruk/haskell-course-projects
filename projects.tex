@@ -4,7 +4,7 @@
 \usepackage[english,russian]{babel}
 \usepackage{csquotes}
 \usepackage{geometry}
-\usepackage[pdftex,unicode]{hyperref}
+\usepackage[pdftex,unicode,colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
 \usepackage[style=numeric,citestyle=alphabetic,sorting=none,backend=biber]{biblatex}
 \usepackage{indentfirst}
 \usepackage{etoolbox}
@@ -17,11 +17,13 @@
 \usepackage[pagestyles]{titlesec}
 \usepackage{fancyhdr}
 
+% remove "Chapter N" from chapter layout
 \titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
 \newpagestyle{mystyle}
 {\sethead[\thepage][][\chaptertitle]{}{}{\thepage}}
 \pagestyle{mystyle}
 
+% set page headers and footers
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{#1}{}}
@@ -40,9 +42,6 @@
 
 % remove vertical spaces before and after verbatim
 \makeatletter
-
-\renewcommand\thechapter{}
-\renewcommand\thesection{\@arabic\c@chapter.\@arabic\c@section}
 
 \preto{\@verbatim}{\topsep=0pt \partopsep=0pt }
 \def\ScaleWidthIfNeeded{%
@@ -65,10 +64,6 @@
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
-\title{Практическое задание по курсу <<Программирование на языке Haskell>>}
-\author{Кудасов~Н.~Д.}
-\date{\the\year~г.}
-
 \begin{document}
 
 \begin{titlepage}
@@ -85,7 +80,7 @@
 
 % Title
 \HRule \\[0.4cm]
-{ \Large \bfseries Практическое задание по курсу <<Программирование на языке Haskell>> \\[0.4cm] }
+{ \Large \bfseries Практические задания по курсу <<Программирование на языке Haskell>> \\[0.4cm] }
 
 \HRule \\[1.5cm]
 
@@ -94,16 +89,13 @@
 \vfill
 
 % Bottom of the page
-{\large \the\year}
+{\large \the\year~г.}
 
 \end{center}
 \end{titlepage}
-\thispagestyle{empty}
 
 \setcounter{tocdepth}{1}
 \tableofcontents
-
-\newcommand{\sectionbreak}{\clearpage}
 
 $body$
 
