@@ -45,15 +45,15 @@
 
 \preto{\@verbatim}{\topsep=0pt \partopsep=0pt }
 \def\ScaleWidthIfNeeded{%
- \ifdim\Gin@nat@width>0.4\textwidth
-    0.4\textwidth
+ \ifdim\Gin@nat@width>0.8\textwidth
+    0.8\textwidth
   \else
     \Gin@nat@width
   \fi
 }
 \def\ScaleHeightIfNeeded{%
-  \ifdim\Gin@nat@height>0.9\textheight
-    0.9\textheight
+  \ifdim\Gin@nat@height>0.4\textheight
+    0.4\textheight
   \else
     \Gin@nat@width
   \fi
@@ -93,6 +93,8 @@
 
 \end{center}
 \end{titlepage}
+
+\newcommand{\sectionbreak}{\clearpage}
 
 \setcounter{tocdepth}{1}
 \tableofcontents
