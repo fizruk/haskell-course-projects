@@ -1,7 +1,7 @@
 Практические задания курса «Программирование на языке Haskell»
 ==============================================================
 
-[![Download PDF](https://img.shields.io/badge/PDF-download-green.svg)](https://github.com/fizruk/haskell-2015/raw/builds/projects.pdf)
+[![Download PDF](https://img.shields.io/badge/PDF-download-green.svg)](https://github.com/fizruk/haskell-course-projects/raw/builds/projects.pdf)
 
 Методические указания и описания практических заданий курса.
 
