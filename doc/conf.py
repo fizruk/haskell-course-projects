@@ -34,7 +34,7 @@ source_suffix = ['.md', '.rst']
 master_doc = 'index'
 
 # General information about the project.
-project = u'haskell-course-projects'
+project = u'haskell-2016'
 copyright = u'2015-2016, Nickolay Kudasov'
 author = u'Nickolay Kudasov'
 
@@ -210,7 +210,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'projects.tex', u'projects Documentation',
+  (master_doc, 'projects.tex', u'Практические задания',
    u'Nickolay Kudasov', 'manual'),
 ]
 
@@ -240,7 +240,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'projects', u'projects Documentation',
+    (master_doc, 'projects', u'Практические задания',
      [author], 1)
 ]
 
@@ -254,7 +254,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'projects', u'projects Documentation',
+  (master_doc, 'projects', u'Практические задания',
    author, 'projects', 'One line description of project.',
    'Miscellaneous'),
 ]

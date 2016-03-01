@@ -1,11 +1,14 @@
 Программирование на языке Haskell
 =================================
 
-Содержание
-----------
-
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
+   :caption: Практические задания
 
    intro.rst
-   projects.rst
+   interpreters.rst
+   DSLs.rst
+   puzzles.rst
+   games.rst
+   simulations.rst
+
