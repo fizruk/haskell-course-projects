@@ -29,10 +29,19 @@
    puzzles/*
 
 Игры
------------
+----
 
 .. toctree::
    :glob:
    :titlesonly:
 
    games/*
+
+Моделирование
+-------------
+
+.. toctree::
+   :glob:
+   :titlesonly:
+
+   simulations/*
