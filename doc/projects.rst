@@ -9,3 +9,12 @@
    :titlesonly:
 
    interpreters/*
+
+Встроенные языки программирования
+---------------------------------
+
+.. toctree::
+   :glob:
+   :titlesonly:
+
+   DSLs/*
