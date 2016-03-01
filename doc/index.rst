@@ -7,4 +7,4 @@
 .. toctree::
 
    README.md
-   intro.md
+   intro.rst
