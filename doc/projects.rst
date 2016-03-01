@@ -27,3 +27,12 @@
    :titlesonly:
 
    puzzles/*
+
+Игры
+-----------
+
+.. toctree::
+   :glob:
+   :titlesonly:
+
+   games/*
