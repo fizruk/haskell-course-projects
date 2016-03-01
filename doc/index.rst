@@ -8,3 +8,4 @@
 
    README.md
    intro.rst
+   projects.rst
